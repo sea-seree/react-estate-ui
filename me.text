@@ -1,0 +1,15 @@
+โปรเจค React เพื่อเสริมสร้างความเข้าใจใน React และ การใช้ Ui ต่างๆ
+
+1.สร้าง index.scss และ import เข้าไปใน main.jsx
+
+2.กำหนด หน้าเว็บทั้งหมดโดยใช้ *, ลิงค์ a , กำหนด font ใน body 
+
+3 กำหนด Responsive Layout จะกำหนดทั้งหมด 4 break points รวมหน้าหลักด้วย
+    -small sm เหมาะสำหรับ มือถือ
+    -medium md เหมาะสำหรับ ไอแพท
+    -large la เหมาะสำหรับคอม NB
+    -maximum mx ขนาดปกติ-ใหญ่กว่า max-width: 1366px;
+        ดูใน responsive.scss และ Layout.scss
+
+4.สร้าง Components 
+    Navbar 
