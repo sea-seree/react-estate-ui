@@ -12,4 +12,39 @@
         ดูใน responsive.scss และ Layout.scss
 
 4.สร้าง Components 
-    Navbar 
+    Navbar แบ่งตามที่กำหนด
+
+5.สร้าง routes หน้าต่างๆ ให้ลิงค์ถึงกัน
+    homePage แบ่งซ้ายขวาจัดตามความเหมาะสม
+        -SearchBar
+            สร้างใน Components และเรียกใช้
+            - ปุ่มสลับสี buy,rent
+                สร้าง State qurey รับค่า ({
+                        type: "buy",
+                        location: "",
+                        minPrice: 0,
+                        maxPrice: 0,
+                })
+                สร้าง ฟังชั่ว types เป็น array ["buy","rent"]
+                และนำ types ไป map อย่าลืมใส่ key={type}
+                สามารถใส่ type ได้เพราะมีความแตกต่างกัน
+                จากนั้นสร้างตัวแปร switchType และใส่ค่า type ลงไป
+                switchType รับ ค่า val และรับค่า type จาก State
+                setQuery รับค่าก่อนหน้า(prev) คือรับทุกอยากเหมือนเดิมจากที่มีอยู่
+                รับมาแค่ type ค่า val
+                ({...prev, type:vla}) และส่งกลับไป
+                จากนั้น สร้าง classname พร้อมกับสร้าง condition(เงื่อนไข)
+                ถ้า qurey.type === type ของปุ่ม จะให้ ? "active"
+                แต่ถ้าไม่ใช่ : ก็จะเป็นค่าว่าง ""
+                    classname={qurey.type === type ? "active" : ""}
+                จากนั้นก็สร้าง scss ตกแต่งหน้าตา form และขนาดของจอ sm md lg
+6.React-routes-dom
+        จะใช้ React-routes-dom เพื่อเปลี่ยนไปหน้าเพจต่างๆ โดยเราจะใช้ฟังชั่น browserRouter
+
+        สร้างโฟลเดอร์ layout ใน routes นำ scss ของ Layout หลักมาใช้ใน folder นี้ และลบตัวหลักไป 
+        เพื่อควบคุม scss ทั้งหมด
+
+        ใน App.jsx เราจะสร้าง path โดยมี <Layout /> เป็นหลัก และ children จะมี หน้าเพจต่างๆเป็นลูก
+        ในส่วนของ singlePage จะกำหนด  path: "/:id" เพื่อให้เป็น ไดนามิก 
+7.ListPage
+    
