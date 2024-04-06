@@ -46,5 +46,5 @@
 
         ใน App.jsx เราจะสร้าง path โดยมี <Layout /> เป็นหลัก และ children จะมี หน้าเพจต่างๆเป็นลูก
         ในส่วนของ singlePage จะกำหนด  path: "/:id" เพื่อให้เป็น ไดนามิก 
-7.ListPage
-    
+7.DummyData
+    สร้าง Dummy Data เพราะว่าไม่มี Database
